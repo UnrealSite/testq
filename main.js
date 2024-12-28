@@ -12,19 +12,6 @@ function toggleTheme() {
     }
 }
 
-// Language switching functionality
-let currentLanguage = 'en';
-
-function changeLanguage(lang) {
-    currentLanguage = lang;
-    
-    // Update active button state
-    document.querySelectorAll('.language-selector button').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.onclick.toString().includes(lang)) {
-            btn.classList.add('active');
-        }
-    });
 
     // Update all translatable elements
     document.querySelectorAll('[data-translate]').forEach(element => {
